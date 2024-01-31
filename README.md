@@ -32,3 +32,25 @@ and the function call path to the vulnerability
 
 *Note: Once the java application is run, `malicious_file.zip` will be deleted by it. To run it again, run `git checkout .` prior
 to next java run.*
+
+
+## Prereqs and steps to tools used
+
+### Sonarcloud
+*  Create account in sonarcloud
+*  create organization, project key and token
+*  get these infos:
+   *  `sonar.host.url=https:sonarcloud.io`, `sonar.organization=gcp-devsecops`, `sonar.projectKey=gcpvulnereableproject`, `sonar.login=generate token to login`
+*  Integrate using cloudbuild yaml arguments accordlying prpg laguage and image in use.
+
+### SNYK
+
+* Create Snyk account
+* Create organization and token
+* Integrate using resources of snyk in steps of CI
+
+### OWASP ZAP
+
+* Create storage to save report
+* Put steps of OWASP ZAP in yaml
+  
